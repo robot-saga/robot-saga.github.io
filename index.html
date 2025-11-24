@@ -107,7 +107,7 @@
       The SAGA policy is trained on multi-task demonstration trajectories collected across diverse scenes encompassing various combinations of eight affordance types. Example scenes are shown, along with the marginal distribution of demonstrations containing each affordance type.
       </p>
 
-    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <!-- Video Gallery Sectionn -->
     <div class="video-gallery-section" id="gallery-section">
       <!-- <div class="video-gallery-container single-video"> -->
       <div class="video-gallery-container">
@@ -128,7 +128,7 @@
       We evaluate SAGA on three unseen scenarios, each composed of three stages, resulting in nine total tasks. With either language instructions or selected points as input, SAGA completes all tasks in a fully zero-shot manner, demonstrating strong generalization to novel tasks.
       </p>
 
-    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <!-- Video Gallery Section -->
     <div class="video-gallery-section" id="gallery-section">
       <div class="video-gallery-container single-video">
         <div class="video-gallery">
@@ -139,7 +139,7 @@
       </div>
     </div>
 
-    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <!-- Video Gallery Section -->
     <div class="video-gallery-section" id="gallery-section">
       <div class="video-gallery-container single-video">
         <div class="video-gallery">
@@ -150,7 +150,7 @@
       </div>
     </div>
 
-    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <!-- Video Gallery Section -->
     <div class="video-gallery-section" id="gallery-section">
       <div class="video-gallery-container single-video">
         <div class="video-gallery">
@@ -160,6 +160,20 @@
         </div>
       </div>
     </div>
+
+      <p>
+      The average success rates across 10 trials are reported for SAGA given language instructions and selected points. Compared to end-to-end and modular baselinse, SAGA consistently achives superior success rates across a wide range of tasks. These results demonstrate the robust zero-shot execution of the proposed approach.
+      </p>
+
+    <div class="video-gallery-section" id="gallery-section">
+      <!-- <div class="video-gallery-container single-video"> -->
+      <div class="video-gallery-container single-video">
+        <div class="video-gallery">
+          <img class="gallery-img" src="assets/images/zero-shot.png" style="flex:0 0 auto;height:auto;width:950px;"></img>
+        </div>
+      </div>
+    </div>
+
 
     <div class="tagline" id="video-gallery-title">Few-Shot Adaptation</div>
       <!-- <p class="figure-caption gallery-caption"> -->
@@ -174,7 +188,7 @@
       </ul>
       </p>
 
-    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <!-- Video Gallery Section -->
     <div class="video-gallery-section" id="gallery-section">
       <div class="video-gallery-container">
         <div class="video-gallery">
@@ -182,6 +196,19 @@
           <video class="gallery-video" src="assets/videos/few_shot_object_level.mp4" autoplay muted playsinline loop></video>
           <video class="gallery-video" src="assets/videos/few_shot_task_level.mp4" autoplay muted playsinline loop></video>
           <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
+        </div>
+      </div>
+    </div>
+
+      <p>
+      We evaluate SAGA for object-level and task-level adaptation using 10 demonstrations. Through heatmap-tuning, SAGA consistently outperforms baselines as well as the zero-shot model variant with heatmaps computed from ground truth instructions.
+      </p>
+
+    <div class="video-gallery-section" id="gallery-section">
+      <div class="video-gallery-container single-video">
+        <div class="video-gallery">
+          <!-- <img class="gallery-img" src="assets/images/few-shot.png"></img> -->
+          <img class="gallery-img" src="assets/images/few-shot.png" style="flex:0 0 auto;height:auto;width:700px;"></img>
         </div>
       </div>
     </div>
