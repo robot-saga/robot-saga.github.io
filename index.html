@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAGA</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- ‑‑‑‑‑‑  STYLE SHEETS  ‑‑‑‑‑‑  -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============================================================ -->
+  <!--  PASSWORD GATE (commented out - no longer needed)            -->
+  <!-- ============================================================ -->
+  <!-- 
+  <div id="auth" style="text-align:center;margin-top:20vh;">
+    <h2>Enter paper‑ID to access the site</h2>
+    <input type="password" id="pwd" placeholder="Paper ID" />
+    <button onclick="checkPassword()" style="margin-left:8px;">Submit</button>
+    <p id="msg" style="color:#c00;margin-top:6px;"></p>
+  </div>
+  -->
+
+  <!-- ============================================================ -->
+  <!--  MAIN CONTENT (now displayed by default)                     -->
+  <!-- ============================================================ -->
+  <div id="content" style="display:block;">
+    <!-- MAIN CONTENT BODY -->
+    <main class="main-content">
+
+      <div class="sub-hero-text" style="text-align:center">
+        <b>SAGA:</b> Open-World Mobile Manipulation</br>via Structured Affordance Grounding
+      </div>
+
+      <!-- <div class="authors" style="text-align:center">RA-L Submission<br/></div> -->
+
+      <!-- <div class="quick-links"><a href="paper.pdf" target="_blank">[pdf]</a><a href="#" onclick="return false;">[arXiv (after review)]</a><a href="#" onclick="return false;">[code (after review)]</a></div> -->
+
+      <!-- <div class="section"> -->
+      <!--   <video class="gallery-video" src="assets/videos/teaser.mp4" autoplay muted playsinline loop></video> -->
+      <!-- </div> -->
+
+      <div class="video-gallery-section">
+        <div class="video-gallery-container single-video">
+          <div class="video-gallery">
+            <video class="gallery-video" src="assets/videos/teaser.mp4" style="width: 80%; height: 80%" autoplay muted playsinline loop></video>
+          </div>
+          <div class="gallery-caption-container">
+            <p class="figure-caption gallery-caption">
+            <!-- <p> -->
+            <b>SAGA</b> expresses diverse, complex physical interactions using an affordance-based task representation. By explicitly grounding task objectives as 3D heatmaps in the observed environment, our approach disentangles semantic intents from visuomotor control, enabling generalization across environments, task objectives, and user specifications.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tagline" id="abstract">Abstract</div>
+      <div class="section">
+        <!-- <p class="figure-caption gallery-caption"> -->
+        <p> 
+        We present SAGA, a versatile and adaptive framework for visuomotor control that can generalize across various environments, task objectives, and user specifications. To efficiently learn such capability, our key idea is to disentangle high-level semantic intent from low-level visuomotor control by explicitly grounding task objectives in the observed environment. Using an affordance-based task representation, we express diverse and complex behaviors in a unified, structured form. By leveraging multimodal foundation models, SAGA grounds the proposed task representation to the robot’s visual observation as 3D affordance heatmaps, highlighting task-relevant entities while abstracting away spurious appearance variations that would hinder generalization. These grounded affordances enable us to effectively train a conditional policy on multi-task demonstration data for whole-body control. In a unified framework, SAGA can solve tasks specified in different forms, including language instructions, selected points, and example demonstrations, enabling both zero-shot execution and few-shot adaptation. We instantiate SAGA on a quadrupedal manipulator and conduct extensive experiments across eleven real-world tasks. SAGA consistently outperforms end-to-end and modular baselines by substantial margins. Together, these results demonstrate that structured affordance grounding offers a scalable and effective pathway toward generalist mobile manipulation.
+        </p>
+      </div>
+
+
+    <div class="tagline" id="methods">Structured Affordance Grounding for Actions (SAGA)</div>
+    <div class="section">
+      <!-- <p class="figure-caption gallery-caption"> -->
+      <p>
+      SAGA computes the task representation consists of a set of affordance–entity pairs in latent space. Based on their similarity with visual embeddings, the task representation is grounded to visual observations to form 3D affordance heatmaps, which guides a conditional policy to predict the actions. 
+      </p>
+
+      <div class="video-gallery-section" id="gallery-section">
+        <div class="video-gallery-container single-video">
+          <div class="video-gallery">
+            <video class="gallery-video" src="assets/videos/method_overview.mp4" autoplay muted playsinline loop></video>
+          </div>
+        </div>
+      </div>
+
+      <!-- <p class="figure-caption gallery-caption"> -->
+      <p>
+      The structured SAGA task representation can serve as a unified, modality-agnostic interface, supporting robust control with various types of user specifications: 
+      <ul>
+        <li><b>Language:</b> An instruction that describes the task in natural langauge.</li>
+        <li><b>Point:</b> selected pixel coordinates on the target objects or parts.</li>
+        <li><b>Demonstration:</b> A few example trajectories that illustrate the desired behavior.</li>
+      </ul>
+      </p>
+
+      <div class="video-gallery-section" id="gallery-section">
+        <div class="video-gallery-container single-video">
+          <div class="video-gallery">
+            <video class="gallery-video" src="assets/videos/method_interface.mp4" autoplay muted playsinline loop></video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="tagline" id="video-gallery-title">Training on Multi-Task Demonstrations</div>
+    
+      <!-- <p class="figure-caption gallery-caption"> -->
+      <p>
+      The SAGA policy is trained on multi-task demonstration trajectories collected across diverse scenes encompassing various combinations of eight affordance types. Example scenes are shown, along with the marginal distribution of demonstrations containing each affordance type.
+      </p>
+
+    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <div class="video-gallery-section" id="gallery-section">
+      <!-- <div class="video-gallery-container single-video"> -->
+      <div class="video-gallery-container">
+        <div class="video-gallery">
+          <!-- Videos remain here - ADD autoplay -->
+          <!-- <img src="assets/images/dataset_bar_chart.png"></img> -->
+          <img class="gallery-img" src="assets/images/dataset_bar_chart.png"></img>
+          <video class="gallery-video" src="assets/videos/dataset.mp4" autoplay muted playsinline loop></video>
+          <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="tagline" id="video-gallery-title">Zero-Shot Execution</div>
+      <!-- <p class="figure-caption gallery-caption"> -->
+      <p>
+      We evaluate SAGA on three unseen scenarios, each composed of three stages, resulting in nine total tasks. With either language instructions or selected points as input, SAGA completes all tasks in a fully zero-shot manner, demonstrating strong generalization to novel tasks.
+      </p>
+
+    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <div class="video-gallery-section" id="gallery-section">
+      <div class="video-gallery-container single-video">
+        <div class="video-gallery">
+          <!-- Videos remain here - ADD autoplay -->
+          <video class="gallery-video" src="assets/videos/task1.mp4" autoplay muted playsinline loop></video>
+          <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <div class="video-gallery-section" id="gallery-section">
+      <div class="video-gallery-container single-video">
+        <div class="video-gallery">
+          <!-- Videos remain here - ADD autoplay -->
+          <video class="gallery-video" src="assets/videos/task2.mp4" autoplay muted playsinline loop></video>
+          <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <div class="video-gallery-section" id="gallery-section">
+      <div class="video-gallery-container single-video">
+        <div class="video-gallery">
+          <!-- Videos remain here - ADD autoplay -->
+          <video class="gallery-video" src="assets/videos/task3.mp4" autoplay muted playsinline loop></video>
+          <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
+        </div>
+      </div>
+    </div>
+
+    <div class="tagline" id="video-gallery-title">Few-Shot Adaptation</div>
+      <!-- <p class="figure-caption gallery-caption"> -->
+      <p>
+      We adapt the trained policy using the novel <b>heatmap-tuning</b> algorithm to solve unseen tasks given only 10 example demonstration trajectories. By freezing the trained policy and backpropagate gradients to the task representation, SAGA quickly adapts the heatmaps and achieves high success rates without knowing ground truth instructions.
+      </br>
+      </br>
+      We consider two representative settings:
+      <ul>
+        <li><b>object-level adaptation:</b> An in-distribution affordance set (e.g., grasp, place) is applied to previously unseen objects.</li>
+        <li><b>task-level adaptation:</b> The robot is asked to solve the task specified by a novel combination of affordance types (grasp, avoid, and indirect_contact), which is unseen during policy training.</li>
+      </ul>
+      </p>
+
+    <!-- Video Gallery Section - mobile interlimb coordination -->
+    <div class="video-gallery-section" id="gallery-section">
+      <div class="video-gallery-container">
+        <div class="video-gallery">
+          <!-- Videos remain here - ADD autoplay -->
+          <video class="gallery-video" src="assets/videos/few_shot_object_level.mp4" autoplay muted playsinline loop></video>
+          <video class="gallery-video" src="assets/videos/few_shot_task_level.mp4" autoplay muted playsinline loop></video>
+          <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
+        </div>
+      </div>
+    </div>
+
+    <!-- End of main content -->
+
+    </main>
+    <footer class="footer">© Anonymous Authors.</footer>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  JS                                                          -->
+  <!-- ============================================================ -->
+  <script src="assets/js/password.js"></script>
+  <script src="assets/js/full_screen_video.js"></script>
+  <script src="assets/js/scroll_button.js"></script>
+</body>
+</html>
